@@ -4,5 +4,5 @@ db.sqlite3
 .env
 env.txt
 
-!*media/.gitkeep
-media/*
+# !*media/.gitkeep
+# media/*

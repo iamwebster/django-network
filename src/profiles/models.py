@@ -17,4 +17,12 @@ class UserNet(AbstractUser):
     github = models.CharField(max_length=500, blank=True, null=True)
     birthday = models.DateField(blank=True, null=True)
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES, default='M')
+    technology = models.ManyToManyField('Tecnhology', related_name='users')
     
+
+class Tecnhology(models.Model):
+    '''Technology model'''
+    name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name 
